@@ -36,7 +36,7 @@ public class Uploaded_net {
     public Uploaded_net() throws Exception {
 
         this.properties = new Properties();
-        this.inputStream = new FileInputStream("config.properties");
+        this.inputStream = new FileInputStream("src/config.properties");
         properties.load(this.inputStream);
 
         this.username = properties.getProperty("uploaded_net_username");
@@ -52,7 +52,7 @@ public class Uploaded_net {
         requestResponse.getPageContent(properties.getProperty("uploaded_net_url"));
         requestResponse.sendPostPara(properties.getProperty("uploaded_net_loginurl"), getLoginParaList());
         requestResponse.getPageContent(properties.getProperty("uploaded_net_url"));
-        
+
     }
 
 
